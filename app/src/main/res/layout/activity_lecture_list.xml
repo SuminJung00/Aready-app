@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lectureListLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LectureListActivity"
+    android:padding="16dp">
+
+    <!-- 뒤로가기 버튼 (상단 좌측) -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="뒤로가기"
+        android:src="@android:drawable/ic_menu_revert"
+        app:tint="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 제목 (뒤로가기 아래에 따로 배치) -->
+    <TextView
+        android:id="@+id/titleLectureList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="전체 강의 목록"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerLectureList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/titleLectureList"
+        app:layout_constraintBottom_toTopOf="@id/btnAddLecture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- 새로운 강의 등록 버튼 -->
+    <Button
+        android:id="@+id/btnAddLecture"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="새로운 강의 등록"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

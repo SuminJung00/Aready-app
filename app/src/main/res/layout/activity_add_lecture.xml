@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="24dp">
+
+        <!-- 상단: 뒤로가기 버튼 -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="start"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="뒤로가기"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="#000000"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 제목 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="새로운 강의 등록"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 강의 이름 -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="강의 이름" />
+        <EditText
+            android:id="@+id/etLectureName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:hint="예: 데이터베이스개론"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 강의 요일 -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="강의 요일" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <ToggleButton android:id="@+id/toggleMon"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:textOn="월" android:textOff="월" />
+
+            <ToggleButton android:id="@+id/toggleTue"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:textOn="화" android:textOff="화" />
+
+            <ToggleButton android:id="@+id/toggleWed"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:textOn="수" android:textOff="수" />
+
+            <ToggleButton android:id="@+id/toggleThu"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:textOn="목" android:textOff="목" />
+
+            <ToggleButton android:id="@+id/toggleFri"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:textOn="금" android:textOff="금" />
+        </LinearLayout>
+
+        <!-- 강의 시간 -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="강의 시간" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <EditText android:id="@+id/etStartHour"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:hint="시 (예: 09)" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text=":" android:layout_gravity="center" />
+
+            <EditText android:id="@+id/etStartMin"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:hint="분 (예: 00)" />
+        </LinearLayout>
+
+        <!-- 복습 알림 시간 -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="복습 내용 입력 알림 시간" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <EditText android:id="@+id/etReviewHour"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:hint="시" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text=":" android:layout_gravity="center" />
+
+            <EditText android:id="@+id/etReviewMin"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:hint="분" />
+        </LinearLayout>
+
+        <!-- 미해결 복습 알림 시간 -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="미해결 복습 내용 알림" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <EditText android:id="@+id/etUnresolvedHour"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:hint="시" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text=":" android:layout_gravity="center" />
+
+            <EditText android:id="@+id/etUnresolvedMin"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:hint="분" />
+        </LinearLayout>
+
+        <!-- 등록 버튼 -->
+        <Button
+            android:id="@+id/btnRegisterLecture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="강의 등록" />
+    </LinearLayout>
+</ScrollView>

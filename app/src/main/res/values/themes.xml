@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base 테마 -->
+    <style name="Base.Theme.AReady" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- 여기에 색상이나 폰트 스타일 지정 가능 -->
+    </style>
+
+    <!-- 실제 앱에서 사용할 Theme.AReady 정의 -->
+    <style name="Theme.AReady" parent="Base.Theme.AReady" />
+</resources>
