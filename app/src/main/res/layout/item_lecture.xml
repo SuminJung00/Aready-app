@@ -30,6 +30,13 @@
             android:textSize="14sp"
             android:layout_marginTop="4dp" />
 
+        <Button
+            android:id="@+id/btnReviewNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="복습하기"
+            android:textSize="14sp"/>
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
