@@ -36,8 +36,10 @@ class LectureAdapter (
         holder.btnReviewNote.setOnClickListener {
             val context = holder.itemView.context
             val intent = Intent(context, ReviewNoteActivity::class.java)
+            intent.putExtra("lectureTitle", lecture.lectureTitle)  // ← 이 줄 추가!
             context.startActivity(intent)
         }
+
 
         holder.btnDeleteReviewNote.setOnClickListener {
             onDeleteClick(lecture)

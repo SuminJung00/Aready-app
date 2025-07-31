@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
@@ -9,36 +9,58 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- 과목 이름 -->
+        <!-- 뒤로가기 버튼 -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="뒤로가기"
+            android:src="@android:drawable/ic_menu_revert"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 강의 제목 -->
         <TextView
             android:id="@+id/tvLectureTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="강의 이름"
+            android:text="강의 제목"
             android:textSize="24sp"
             android:textStyle="bold"
             android:gravity="center_horizontal"
             android:layout_marginBottom="24dp" />
 
-        <!-- 복습 내용 입력 -->
+        <!-- 입력 필드 -->
         <EditText
             android:id="@+id/etReviewContent"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:gravity="top|start"
+            android:layout_height="wrap_content"
             android:hint="복습할 내용을 입력하세요"
-            android:background="@android:drawable/edit_text"
-            android:padding="12dp"
-            android:textSize="16sp"
-            android:inputType="textMultiLine"
-            android:maxLines="10"
-            android:layout_marginBottom="32dp" />
+            android:inputType="text"
+            android:layout_marginBottom="16dp" />
 
-        <!-- 노트 등록 버튼 -->
+        <!-- 제출 버튼 -->
         <Button
             android:id="@+id/btnSubmitReviewNote"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="노트 등록" />
+            android:text="등록하기"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 기존 미해결 복습 과제 제목 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="미해결 복습 과제"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 실제 복습 과제 리스트가 추가될 곳 -->
+        <LinearLayout
+            android:id="@+id/unresolvedTasksLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
     </LinearLayout>
-</ScrollView>
+</androidx.core.widget.NestedScrollView>
